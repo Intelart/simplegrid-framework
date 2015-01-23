@@ -1,0 +1,301 @@
+/* 
+
+	Name: Simple Grid - Framework
+	Version: 1.1
+	Author: Przemek Galarowicz ( www.przemekgalarowicz.pl or www.intelart.pl)
+	Licenses: Simple Grid - Framework can be used in personal and commercial projects. But you can not sell as your product.
+
+*/
+
+/*
+	RESET
+*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block; zoom:1;
+}
+
+a {
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+nav ul li {
+	list-style:none;
+}
+
+
+/* **********************************************************************************
+
+	SIMPLE GRID - FRAMEWORK 
+
+************************************************************************************* */
+/*
+	sg-nav
+*/
+.sg-nav li {
+	display: inline-block;
+	padding: 20px;
+}
+.sg-fx {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#sg-nav-trigger {
+	display: none;
+}
+
+/*
+	Grid
+*/
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="col"] {
+    float: left;
+    min-height: 1px;
+ }
+
+.box {
+	padding: 20px;
+}
+
+.box-margin {
+	margin: 0 10px 0 10px;
+}
+
+.col-1, .col-offset-1 {
+	width: 8.33333333333%;
+}
+
+.col-2, .col-offset-2 {
+	width: 16.6666666666%;
+}
+
+.col-3, .col-offset-3 {
+	width: 24.9999999999%;
+}
+
+.col-4, .col-offset-4 {
+	width: 33.3333333333%;
+}
+
+.col-5, .col-offset-5 {
+	width: 41.6666666666%;
+}
+
+.col-6, .col-offset-6 {
+	width: 49.9999999999%;
+}
+
+.col-7, .col-offset-7 {
+	width: 58.3333333333%;
+}
+
+.col-8, .col-offset-8 {
+	width: 66.6666666666%;
+}
+
+.col-9, .col-offset-9 {
+	width: 74.9999999999%;
+}
+
+.col-10, .col-offset-10 {
+	width: 83.3333333333%;
+}
+
+.col-11, .col-offset-11 {
+	width: 91.6666666666%;
+}
+
+.col-12, .col-offset-12 {
+	width: 100%;
+}
+
+@media only screen and (max-width : 768px) and (min-width : 480px) {
+	/*
+		sg-nav
+	*/
+	.sg-nav { padding-top: 10px; }
+	.sg-nav ul {
+		position: absolute;
+		background: #000;
+		margin-left: 10px;
+		width: 300px;
+		min-width: 300px;
+		display: none;
+	}
+	.sg-nav li, .sg-nav li a {
+		display: block;
+		color: #fff;
+	}
+	.sg-nav li { 
+		padding: 0; 
+	}
+	.sg-nav li a { padding: 20px; }
+	#sg-nav-trigger {
+		background: black;
+		border: none;
+		display: block;
+		padding: 10px 8px;
+		margin: 0 0 10px 10px;
+		cursor: pointer;
+	}
+	#sg-nav-trigger span {
+		background: #fff;
+		display: block;
+		margin-top: 4px; 
+		width: 20px;
+		height: 3px;
+	}
+	#sg-nav-trigger span:first-child { margin-top: 0; }
+
+	/*
+		Grid
+	*/
+	.container {
+		width: 96%;
+	}
+
+	[class*="col"] {
+    	width: 50%;
+ 	}
+
+ 	.col-4 {
+		width: 33.3333333333%;
+	}
+
+ 	.col-12 {
+ 		width:100%;
+ 	}
+
+ 	.col-offset-1, .col-offset-2, .col-offset-3, .col-offset-4,
+ 	.col-offset-5, .col-offset-6, .col-offset-7, .col-offset-8,
+ 	.col-offset-9, .col-offset-10, .col-offset-11, .col-offset-12 {
+ 		width: 0% !important;
+ 		display: none;
+ 	}
+
+ 	.box-margin {
+		margin: 0 10px 0 10px;
+	}
+}
+
+@media only screen and (max-width : 479px) {
+	/*
+		sg-nav
+	*/
+	.sg-nav { padding-top: 10px; }
+	.sg-nav ul {
+		position: absolute;
+		background: #000;
+		margin-left: 0px;
+		width: 100%;
+		display: none;
+	}
+	.sg-nav li, .sg-nav li a {
+		display: block;
+		color: #fff;
+	}
+	.sg-nav li { 
+		padding: 0; 
+	}
+	.sg-nav li a { padding: 20px; }
+	#sg-nav-trigger {
+		background: black;
+		border: none;
+		display: block;
+		padding: 10px 8px;
+		margin: 0 0 10px 10px;
+		cursor: pointer;
+	}
+	#sg-nav-trigger span {
+		background: #fff;
+		display: block;
+		margin-top: 4px; 
+		width: 20px;
+		height: 3px;
+	}
+	#sg-nav-trigger span:first-child { margin-top: 0; }
+
+	/*
+		Grid
+	*/
+	.container {
+		width: 96%;
+	}
+
+	[class*="col"] {
+    	float: none;
+    	width: 100%;
+ 	}
+
+ 	.col-offset-1, .col-offset-2, .col-offset-3, .col-offset-4,
+ 	.col-offset-5, .col-offset-6, .col-offset-7, .col-offset-8,
+ 	.col-offset-9, .col-offset-10, .col-offset-11, .col-offset-12 {
+ 		width: 0% !important;
+ 		display: none;
+ 	}
+
+ 	.box-margin {
+		margin: 0 10px 0 10px;
+	}
+}
