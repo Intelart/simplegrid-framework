@@ -1,7 +1,7 @@
 /* 
 
 	Name: Simple Grid - Framework
-	Version: 1.1
+	Version: 1.1.1
 	Author: Przemek Galarowicz ( www.przemekgalarowicz.pl or www.intelart.pl)
 	Licenses: Simple Grid - Framework can be used in personal and commercial projects. But you can not sell as your product.
 
@@ -71,19 +71,41 @@ nav ul li {
 /*
 	sg-nav
 */
-.sg-nav li {
-	display: inline-block;
-	padding: 20px;
-}
-.sg-fx {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
 #sg-nav-trigger {
+	background: none;
+	border-radius: 5px;
+	border: 2px solid #c49b0b;
+	cursor: pointer;
+	width: 44px;
+	height: 40px;
+}
+#sg-nav-trigger span {
+	background: #c49b0b;
+	display: block;
+	margin: 4px auto; 
+	width: 30px;
+	height: 3px;
+}
+
+#sg-nav {
+	top: 20px;
+	left: 20px;
+	position: fixed;
+}
+#sg-nav ul {
+	background: #000;
+	border-radius: 5px;
+	padding: 20px 0;
 	display: none;
 }
+#sg-nav ul li a {
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 30px;
+}
+
 
 /*
 	Grid
@@ -109,7 +131,10 @@ nav ul li {
   clear: both;
 }
 
-[class*="col"] {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-offset-1, .col-offset-2, .col-offset-3, .col-offset-4, .col-offset-5, .col-offset-6,
+.col-offset-7, .col-offset-8, .col-offset-9, .col-offset-10, .col-offset-11, .col-offset-12 {
     float: left;
     min-height: 1px;
  }
@@ -172,50 +197,14 @@ nav ul li {
 
 @media only screen and (max-width : 768px) and (min-width : 480px) {
 	/*
-		sg-nav
-	*/
-	.sg-nav { padding-top: 10px; }
-	.sg-nav ul {
-		position: absolute;
-		background: #000;
-		margin-left: 10px;
-		width: 300px;
-		min-width: 300px;
-		display: none;
-	}
-	.sg-nav li, .sg-nav li a {
-		display: block;
-		color: #fff;
-	}
-	.sg-nav li { 
-		padding: 0; 
-	}
-	.sg-nav li a { padding: 20px; }
-	#sg-nav-trigger {
-		background: black;
-		border: none;
-		display: block;
-		padding: 10px 8px;
-		margin: 0 0 10px 10px;
-		cursor: pointer;
-	}
-	#sg-nav-trigger span {
-		background: #fff;
-		display: block;
-		margin-top: 4px; 
-		width: 20px;
-		height: 3px;
-	}
-	#sg-nav-trigger span:first-child { margin-top: 0; }
-
-	/*
 		Grid
 	*/
 	.container {
 		width: 96%;
 	}
 
-	[class*="col"] {
+	.col-1, .col-2, .col-3, .col-5, .col-6,
+	.col-7, .col-8, .col-9, .col-10, .col-11 {
     	width: 50%;
  	}
 
@@ -241,49 +230,14 @@ nav ul li {
 
 @media only screen and (max-width : 479px) {
 	/*
-		sg-nav
-	*/
-	.sg-nav { padding-top: 10px; }
-	.sg-nav ul {
-		position: absolute;
-		background: #000;
-		margin-left: 0px;
-		width: 100%;
-		display: none;
-	}
-	.sg-nav li, .sg-nav li a {
-		display: block;
-		color: #fff;
-	}
-	.sg-nav li { 
-		padding: 0; 
-	}
-	.sg-nav li a { padding: 20px; }
-	#sg-nav-trigger {
-		background: black;
-		border: none;
-		display: block;
-		padding: 10px 8px;
-		margin: 0 0 10px 10px;
-		cursor: pointer;
-	}
-	#sg-nav-trigger span {
-		background: #fff;
-		display: block;
-		margin-top: 4px; 
-		width: 20px;
-		height: 3px;
-	}
-	#sg-nav-trigger span:first-child { margin-top: 0; }
-
-	/*
 		Grid
 	*/
 	.container {
 		width: 96%;
 	}
 
-	[class*="col"] {
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+	.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     	float: none;
     	width: 100%;
  	}
